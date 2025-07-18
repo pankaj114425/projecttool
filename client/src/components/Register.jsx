@@ -8,8 +8,8 @@ const Register = () => {
   const{setUser}=useConfigurator()
   const [isLogin, setIsLogin] = useState(false);
 
-const registerurl='http://localhost:8080/api/v1/user/register'
-const loginurl='http://localhost:8080/api/v1/user/login'
+const registerurl='https://projecttool-ro73.onrender.com/api/v1/user/register'
+const loginurl='https://projecttool-ro73.onrender.com/api/v1/user/login'
 const navigate=useNavigate()
   const {
     register,

@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 
 const Projects = () => {
-  const getprojectsurl = "http://localhost:8080/api/v1/project/getallprojects";
-  const addprojectsurl = "http://localhost:8080/api/v1/project/createproject";
+  const getprojectsurl = "https://projecttool-ro73.onrender.com/api/v1/project/getallprojects";
+  const addprojectsurl = "https://projecttool-ro73.onrender.com/api/v1/project/createproject";
 
 
 const navigate=useNavigate()
@@ -126,7 +126,7 @@ const handleEdit=(project)=>{
 const handleDelete=async(id)=>{
 
     try {
-      const res = await axios.delete(`http://localhost:8080/api/v1/project/deleteproject/${id}`, {
+      const res = await axios.delete(`https://projecttool-ro73.onrender.com/api/v1/project/deleteproject/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -152,7 +152,7 @@ const handleupdatebutton=async()=>{
      const body = newProject;
 
     try {
-      const res = await axios.put(`http://localhost:8080/api/v1/project/updateproject/${projectId}`, body, {
+      const res = await axios.put(`https://projecttool-ro73.onrender.com/api/v1/project/updateproject/${projectId}`, body, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

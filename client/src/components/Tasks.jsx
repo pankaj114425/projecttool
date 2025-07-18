@@ -22,7 +22,7 @@ const Tasks = () => {
     description: '',
     dueDate: '',
   });
-const addtasksurl = "http://localhost:8080/api/v1/task/createtask";
+const addtasksurl = "https://projecttool-ro73.onrender.com/api/v1/task/createtask";
 
 const {projectDetail,setProjectDetail}=useConfigurator()
 const navigate=useNavigate()
@@ -44,7 +44,7 @@ const navigate=useNavigate()
   const handleDelete=async(id)=>{
 
     try {
-      const res = await axios.delete(`http://localhost:8080/api/v1/task/project/${params.id}/tasks/${id}`, {
+      const res = await axios.delete(`https://projecttool-ro73.onrender.com/api/v1/task/project/${params.id}/tasks/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -90,7 +90,7 @@ const navigate=useNavigate()
      const body = newTask;
     
     try {
-      const res = await axios.put(`http://localhost:8080/api/v1/task/project/${params.id}/tasks/${editId}`, body, {
+      const res = await axios.put(`https://projecttool-ro73.onrender.com/api/v1/task/project/${params.id}/tasks/${editId}`, body, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -113,7 +113,7 @@ const navigate=useNavigate()
 
     const getAllTasks = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/api/v1/task/project/${params.id}/tasks`, {
+      const res = await axios.get(`https://projecttool-ro73.onrender.com/api/v1/task/project/${params.id}/tasks`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
