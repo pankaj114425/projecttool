@@ -197,7 +197,7 @@ const handleProjectClick=(project)=>{
             onClick={() => setFilter(f)}
             className={`block w-full text-left px-3 py-2 rounded ${
               filter === f
-                ? "bg-blue-100 text-blue-700 font-medium"
+                ? "bg-blue-100 text-black font-medium"
                 : "hover:bg-gray-100"
             }`}
           >
